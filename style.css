@@ -8,19 +8,18 @@
   padding: 0;
   margin: 0;
 }
-body{
+body {
   background-color: #f9f9fa;
-  
 }
 
-header{
+header {
   height: 500px;
   background-color: #4717ff;
   padding-left: 5%;
   padding-top: 2%;
 }
 
-nav{
+nav {
   float: right;
   margin-right: 5%;
   margin-top: 20px;
@@ -31,7 +30,7 @@ nav{
   color: #fff;
 }
 
-.nav-item-active{
+.nav-item-active {
   background-color: #fff;
   padding: 2px 10px;
   margin-left: 20px;
@@ -41,7 +40,6 @@ nav{
 }
 
 .logo {
-
   margin-top: 30px;
   margin-bottom: 50px;
 }
@@ -51,26 +49,25 @@ nav{
   margin: 20px 0px 10px;
   font-size: medium;
   max-width: 70vw;
-
 }
 
-.header-image{
+.header-image {
   float: right;
   position: relative;
   top: -220px;
 }
 
-.companies{
+.companies {
   margin-left: 5%;
   margin-top: 2%;
 }
 
 .company-items {
-  font-family: 'Righteous', cursive;
+  font-family: "Righteous", cursive;
   text-decoration: none;
   color: #000;
   font-weight: bolder;
-  margin-right: 20px ;
+  margin-right: 20px;
 }
 
 .api-heading {
@@ -80,7 +77,7 @@ nav{
   font-weight: 900;
 }
 
-.cards{
+.cards {
   margin-left: 5%;
   margin-top: 5%;
   display: flex;
@@ -107,7 +104,7 @@ nav{
   background-color: #fff;
 }
 
-.card-body{
+.card-body {
   font-size: 15px;
 }
 
@@ -126,7 +123,6 @@ nav{
   position: absolute;
   bottom: 10%;
   right: 10%;
-
 }
 
 .blog-cards {
@@ -136,31 +132,33 @@ nav{
   justify-content: space-between;
   width: 90%;
   gap: 15px;
-  
+  flex-wrap: wrap;
 }
 .blog-card {
   height: 288px;
-  width: 50%;
+  width: 453px;
   background-color: white;
-  
 }
-
 
 .blog-image {
   float: left;
   margin-right: 10px;
 }
 
+.blog-content {
+}
+
 .blog-content h6 {
   margin-top: 20px;
   margin-bottom: 10px;
+
 }
 
 .blog-content h3 {
   margin-right: 10px;
   font-weight: 900;
 }
-.blog-card-bottom-image{
+.blog-card-bottom-image {
   position: absolute;
   margin-top: 55px;
 }
@@ -171,19 +169,15 @@ nav{
   margin-left: 60px;
 }
 
-
-
-
 .faq-section {
   margin-top: 5%;
-  background-color: #e8edfe ;
+  background-color: #e8edfe;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
-  padding-left: 5%  ;
+  padding-left: 5%;
 }
-
 
 .faq-content h2 {
   font-size: 30px;
@@ -195,8 +189,7 @@ nav{
   font-weight: 400;
 }
 
-.faq-content :nth-child(3)
-{
+.faq-content :nth-child(3) {
   font-size: 15px;
   font-weight: bolder;
   margin-top: 20px;
@@ -220,17 +213,16 @@ nav{
   padding-left: 5%;
   padding-right: 5%;
   align-items: center;
-
 }
 
 .download-content {
   font-weight: bold;
+  padding-top: 40px;
 }
 
 .download-content span {
   font-weight: normal;
 }
-
 
 .download-email input {
   border-style: none;
@@ -255,7 +247,7 @@ nav{
 }
 
 .footer-section {
-  padding-top: 80px;
+  padding-top: 40px;
   padding-left: 5%;
   padding-right: 5%;
   color: #fff;
@@ -272,7 +264,8 @@ nav{
   float: right;
 }
 
-.list , .logos-list {
+.list,
+.logos-list {
   margin-top: 20px;
   display: flex;
   flex-direction: row;
@@ -289,8 +282,101 @@ nav{
   margin-top: 60px;
 }
 
+@media screen and (max-width: 768px) {
+  header {
+    height: 100%;
+    text-align: center;
+  }
+
+  .header-text {
+    max-width: 100%;
+  }
+  .header-image {
+    max-width: 60% ;
+    position: static;
+    margin: 40px -10px;
+    float: none;
+  }
+
+  .companies {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .api-heading, .blog-heading{
+    text-align: center;
+  }
 
 
-@media screen and (max-width: 480px) {
-  
-}
+  .cards {
+    flex-wrap: wrap;
+  }
+
+  .card , .card-active{
+    width: 47%;
+  }
+
+  .blog-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .blog-image {
+    
+  }
+
+  .blog-card {
+    height: 300px;
+    width: 100%;
+  }
+  .faq-section {
+    display: block;
+    text-align: center;
+    height: 100%;
+    padding-left: 0;
+  }
+  .faq-content h2 {
+    text-align: center;
+    margin-bottom: 40px;
+
+  }
+
+  .faq-image {
+    display: none;
+  }
+
+  .faq-content button {
+    margin-bottom: 20px;
+  }
+
+  .download-section {
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;
+    padding: 0%;
+  }
+  .download-email {
+    position: relative;
+    padding-bottom: 40px;
+  }
+  .download-email input{
+    position: relative;
+    padding-right: 50px;
+    left: 0%;
+  }
+  .download-email button {
+    position: absolute;
+    right: 0px
+  }
+  .download-email form {
+    text-align: center;
+  }
+  .footer-left , .footer-right{
+    float: none;
+    margin-bottom: 10px;
+  }
+  .logos-list {
+    margin: 0;
+    justify-content: flex-start;
+  }
+} 
